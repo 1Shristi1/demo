@@ -1,6 +1,7 @@
 import React from "react";
 import EastIcon from '@mui/icons-material/East';
 import SouthIcon from '@mui/icons-material/South';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 
 export const ManageCard = () => {
@@ -12,10 +13,11 @@ export const ManageCard = () => {
 
     return (
         <div className="inline-flex flex-col gap-[12px] w-full">
+            {/* Manage Card */}
             <div className="relative p-[16px] mt-5 h-[112px] bg-[#262626] rounded-[16px] overflow-hidden">
 
                 <div className="absolute top-[-22px] right-[16px] ">
-                    <img src="images/card.svg" className="h-[181px] w-[126px] rounded-[16px]" alt="card image" />
+                    <img src="images/card.svg" className="h-[181px] w-[126px] rounded-[16px]" alt="card" />
                 </div>
 
                 <div className="inline-flex flex-col items-start gap-[12px] pt-2">
@@ -38,14 +40,14 @@ export const ManageCard = () => {
                 </div>
             </div>
 
-
+            {/* jewles and withdraw */}
             <div className="grid grid-cols-2  gap-4">
 
                 <button onClick="" className="bg-[#262626] py-[12px] px-[16px] items-center rounded-[16px] h-[72px] focus:outline-none">
 
                     <div className="flex flex-wrap gap-[8px] items-center justify-center">
-                        <img src="images/gold-jewels-outline.svg" alt="gold jewel image" className="h-[48px] w-[48px] p-3 rounded-full text-black bg-[#FFE3B6]" />
-                        <div className="font-inter text-white text-base text-left leading-[22px] whitespace-normal">View <br />  Jewels</div>
+                        <img src="images/gold-jewels-outline.svg" alt="goldjewel" className="h-[48px] w-[48px] p-3 rounded-full text-black bg-[#FFE3B6]" />
+                        <div className="font-inter text-white text-normal text-left leading-[22px] whitespace-normal">View <br />  Jewels</div>
                     </div>
 
                 </button>
@@ -53,12 +55,22 @@ export const ManageCard = () => {
 
                     <div className="flex flex-wrap gap-[7px] items-center justify-center">
                         <div className="h-[48px] w-[48px] p-3 rounded-full text-black bg-[#FFE3B6]"><SouthIcon /></div>
-                        <div className="font-inter text-white text-base text-left leading-[22px] whitespace-normal">Withdraw</div>
+                        <div className="font-inter text-white text-normal text-left leading-[22px] whitespace-normal">Withdraw</div>
+                        
                     </div>
 
                 </button>
 
             </div>
+
+            {/* card status */}
+            <div className="flex flex-wrap gap-6 items-center justify-center p-[16px] h-[76px] bg-[#262626] rounded-[16px]">
+            <img src="images/shipped.svg" alt="goldjewel" className="h-[48px] w-[48px]" />
+            <div className="font-inter text-white text-normal text-left text-[14px] leading-[22px] whitespace-normal">Your Credit Card has been  <br />dispatched</div>
+            <div className="text-white"><KeyboardArrowRightIcon/></div>
+            </div>
+
+
         </div>
     );
 };

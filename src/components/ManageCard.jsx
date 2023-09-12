@@ -2,6 +2,12 @@ import React from "react";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 export const ManageCard = () => {
+
+    const sendMessageToFlutter = () => {
+        window.myChannel.postMessage('Hello from JavaScript');
+      };
+
+
     return (
 
         <div className="relative p-4 mt-5 h-40 bg-neutral-800 rounded-[16px] overflow-hidden">
@@ -29,8 +35,13 @@ export const ManageCard = () => {
                 </div>
 
                 <div className="[font-family:'Inter-Medium',_Helvetica] font-medium text-[#ffe3b6] text-[18px] text-right tracking-[0] leading-[22px] whitespace-nowrap ">
-                       Manage <ArrowRightAltIcon />
-                       </div>
+                    <button
+                        className="text-[#ffe3b6] focus:outline-none"
+                        onClick={sendMessageToFlutter}
+                    >
+                        Manage <ArrowRightAltIcon />
+                    </button>
+                </div>
             </div>
 
 

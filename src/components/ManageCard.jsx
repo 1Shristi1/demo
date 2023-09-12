@@ -1,75 +1,64 @@
 import React from "react";
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import EastIcon from '@mui/icons-material/East';
+import SouthIcon from '@mui/icons-material/South';
 
 
 export const ManageCard = () => {
 
     const sendMessageToFlutter = () => {
         window.myChannel.postMessage('Hello from JavaScript');
-      };
+    };
 
 
     return (
+        <div className="inline-flex flex-col gap-[12px] w-full">
+            <div className="relative p-[16px] mt-5 h-[112px] bg-[#262626] rounded-[16px] overflow-hidden">
 
-        <div className="relative p-[16px] mt-7 h-32 bg-[#262626] rounded-[16px] overflow-hidden">
-
-
-             <div className="absolute top-[-22px] right-[16px] ">
-                <img src="images/card.svg" className="h-[181px] w-[126px] rounded-[16px]"/>
-            </div>
-
-
-
-            <div className="inline-flex flex-col items-start gap-[20px] pt-2">
-                <div className="inline-flex flex-col items-start justify-center gap-[4px]">
-                    <div className="text-type-neutral-medium-emphasis font-inter font-semibold text-[16px] tracking-[0.4px] text-[#F2F2F2] leading-24">
-                        Manage my card
-                    </div>
-                    <div className="[font-family:'Inter-Regular',_Helvetica] tracking-[0.4px] text-[12px] text-[#d8d8d8] font-normal leading-24">
-                        Convert to EMI
-                    </div>
+                <div className="absolute top-[-22px] right-[16px] ">
+                    <img src="images/card.svg" className="h-[181px] w-[126px] rounded-[16px]" alt="card image" />
                 </div>
 
-                <div className="[font-family:'Inter-Medium',_Helvetica] font-medium text-[#ffe3b6] text-[14px] text-right tracking-[0.4px] leading-24 ">
-                    <button
-                        className="text-[#ffe3b6] focus:outline-none"
-                        onClick={sendMessageToFlutter}
-                    >
-                        Manage <ArrowForwardIcon />
-                    </button>
+                <div className="inline-flex flex-col items-start gap-[12px] pt-2">
+                    <div className="inline-flex flex-col items-start justify-center gap-[4px]">
+                        <div className="text-type-neutral-medium-emphasis font-inter font-semibold text-[16px] tracking-[0.4px] text-[#F2F2F2] leading-24">
+                            Manage my card
+                        </div>
+                        <div className="[font-family:'Inter-Regular',_Helvetica] tracking-[0.4px] text-[12px] text-[#d8d8d8] font-normal leading-24">
+                            Convert to EMI
+                        </div>
+                    </div>
+                    <div className="[font-family:'Inter-Medium',_Helvetica] font-medium text-[#ffe3b6] text-[14px] text-right tracking-[0.4px] leading-24 ">
+                        <button
+                            className="text-[#ffe3b6] focus:outline-none"
+                            onClick={sendMessageToFlutter}
+                        >
+                            Manage <EastIcon />
+                        </button>
+                    </div>
                 </div>
             </div>
 
 
+            <div className="grid grid-cols-2  gap-4">
+
+                <button onClick="" className="bg-[#262626] py-[12px] px-[16px] items-center rounded-[16px] h-[72px] focus:outline-none">
+
+                    <div className="flex flex-wrap gap-[8px] items-center justify-center">
+                        <img src="images/gold-jewels-outline.svg" alt="gold jewel image" className="h-[48px] w-[48px] p-3 rounded-full text-black bg-[#FFE3B6]" />
+                        <div className="font-inter text-white text-base text-left leading-[22px] whitespace-normal">View <br />  Jewels</div>
+                    </div>
+
+                </button>
+                <button onClick="" className="bg-[#262626] py-[12px] px-[16px] items-center rounded-[16px] h-[72px] focus:outline-none">
+
+                    <div className="flex flex-wrap gap-[7px] items-center justify-center">
+                        <div className="h-[48px] w-[48px] p-3 rounded-full text-black bg-[#FFE3B6]"><SouthIcon /></div>
+                        <div className="font-inter text-white text-base text-left leading-[22px] whitespace-normal">Withdraw</div>
+                    </div>
+
+                </button>
+
+            </div>
         </div>
-
-        // <div className="flex flex-col items-start justify-center p-6 mt-5 relative bg-neutral-800 rounded-[16px] overflow-hidden">
-        //     <div className="absolute w-[140px] h-[181px] top-[40px] right-[20px] rounded-[16px] bg-gradient-to-r from-neutral-700 to-neutral-500">
-        //         <div className="inline-flex items-start gap-[2px] absolute top-[37px] left-[52px]">
-        //             <div className="relative w-[20px] h-[20px] bg-[#d9d9d9] rounded-[1px]" />
-        //             <img className="relative w-[8px] h-[12px]" alt="Nfc" src="NFC.svg" />
-        //         </div>
-        //         <div className="absolute top-[64px] right-[46px]  pt-2 [font-family:'Inter-SemiBold',_Helvetica] font-semibold text-[#a6a6a6] text-[16px] tracking-[0.24px] leading-[18px] whitespace-nowrap ">
-        //             XXXX
-        //         </div>
-        //     </div>
-        //     <div className="inline-flex flex-col items-start gap-[12px] relative flex-[0_0_auto]">
-        //         <div className="inline-flex flex-col items-start justify-center gap-[4px] relative flex-[0_0_auto]">
-        //             <div className="text-white relative w-fit mt-[-1.00px] [font-family:var(--body-large-high-emphasis-font-family)] font-[number:var(--body-large-high-emphasis-font-weight)] text-[color:var(--typeneutralmedium-emphasis)] text-[length:var(--body-large-high-emphasis-font-size)] tracking-[var(--body-large-high-emphasis-letter-spacing)] leading-[var(--body-large-high-emphasis-line-height)] whitespace-nowrap ">
-        //                 Manage my card
-        //             </div>
-        //             <div className="text-white relative w-fit mt-[-1.00px] [font-family:var(--body-large-high-emphasis-font-family)] font-[number:var(--body-large-high-emphasis-font-weight)] text-[color:var(--typeneutralmedium-emphasis)] text-[length:var(--body-large-high-emphasis-font-size)] tracking-[var(--body-large-high-emphasis-letter-spacing)] leading-[var(--body-large-high-emphasis-line-height)] whitespace-nowrap ">
-        //                Convert to EMI
-        //             </div>
-        //         </div>
-
-        //         <div className="inline-flex items-center gap-[6px] relative flex-[0_0_auto]">
-        //             <div className="relative w-fit mt-[-1.00px] [font-family:'Inter-Medium',_Helvetica] font-medium text-[#ffe3b6] text-[18px] text-right tracking-[0] leading-[22px] whitespace-nowrap ">
-        //                 Manage
-        //             </div>
-        //             {/* <ArrowRight className="!relative !w-[16px] !h-[16px]" color="#FFE3B6" /> */}
-        //         </div>
-        //     </div>
-        // </div>
     );
 };

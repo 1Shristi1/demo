@@ -11,22 +11,11 @@ export const ManageCard = () => {
 
     return (
 
-        <div className="relative p-[16px] mt-5 h-32 bg-[#262626] rounded-[16px] overflow-hidden">
+        <div className="relative p-[16px] mt-7 h-32 bg-[#262626] rounded-[16px] overflow-hidden">
 
-            {/* <div className="absolute h-[181px] w-[140px] top-[40px] right-[20px] items-center justify-center rounded-[16px] bg-gradient-to-r from-neutral-700 to-neutral-500">
-                <div className="text-center ">
-                    <div className="inline-flex gap-[2px]">
-                        <div className=" w-[20px] h-[20px] bg-[#d9d9d9] rounded-[1px]" />
-                        <img className=" w-[8px] h-[12px]" alt="Nfc" src="NFC.svg" />
-                    </div>
-                    <div className=" pt-2 [font-family:'Inter-SemiBold',_Helvetica] font-semibold text-[#a6a6a6] text-[16px] tracking-[0.24px] leading-[18px] whitespace-nowrap ">
-                        XXXX
-                    </div>
-                </div>
-            </div> */}
 
-             <div className="absolute top-[-16px] right-[16px] ">
-                <img src="images/card.svg" className="h-[181px] w-[126px] rounded-lg"/>
+             <div className="absolute top-[-22px] right-[16px] ">
+                <img src="images/card.svg" className="h-[181px] w-[126px] rounded-[16px]"/>
             </div>
 
 

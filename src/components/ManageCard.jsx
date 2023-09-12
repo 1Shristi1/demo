@@ -1,5 +1,6 @@
 import React from "react";
-import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+
 
 export const ManageCard = () => {
 
@@ -10,9 +11,9 @@ export const ManageCard = () => {
 
     return (
 
-        <div className="relative p-4 mt-5 h-40 bg-neutral-800 rounded-[16px] overflow-hidden">
+        <div className="relative p-[16px] mt-5 h-32 bg-[#262626] rounded-[16px] overflow-hidden">
 
-            <div className="absolute h-[181px] w-[140px] top-[40px] right-[20px] items-center justify-center rounded-[16px] bg-gradient-to-r from-neutral-700 to-neutral-500">
+            {/* <div className="absolute h-[181px] w-[140px] top-[40px] right-[20px] items-center justify-center rounded-[16px] bg-gradient-to-r from-neutral-700 to-neutral-500">
                 <div className="text-center ">
                     <div className="inline-flex gap-[2px]">
                         <div className=" w-[20px] h-[20px] bg-[#d9d9d9] rounded-[1px]" />
@@ -22,24 +23,30 @@ export const ManageCard = () => {
                         XXXX
                     </div>
                 </div>
+            </div> */}
+
+             <div className="absolute top-[-16px] right-[16px] ">
+                <img src="images/card.svg" className="h-[181px] w-[126px] rounded-lg"/>
             </div>
+
+
 
             <div className="inline-flex flex-col items-start gap-[20px] pt-2">
                 <div className="inline-flex flex-col items-start justify-center gap-[4px]">
-                    <div className="[font-family:'Inter-SemiBold',_Helvetica] text-[#f2f2f2] text-[20px] tracking-[0]  whitespace-nowrap">
+                    <div className="text-type-neutral-medium-emphasis font-inter font-semibold text-[16px] tracking-[0.4px] text-[#F2F2F2] leading-24">
                         Manage my card
                     </div>
-                    <div className="[font-family:'Inter-Regular',_Helvetica] w-[128px] left-0 tracking-[0.24px] text-[16px] text-[#d8d8d8] font-normal  ">
+                    <div className="[font-family:'Inter-Regular',_Helvetica] tracking-[0.4px] text-[12px] text-[#d8d8d8] font-normal leading-24">
                         Convert to EMI
                     </div>
                 </div>
 
-                <div className="[font-family:'Inter-Medium',_Helvetica] font-medium text-[#ffe3b6] text-[18px] text-right tracking-[0] leading-[22px] whitespace-nowrap ">
+                <div className="[font-family:'Inter-Medium',_Helvetica] font-medium text-[#ffe3b6] text-[14px] text-right tracking-[0.4px] leading-24 ">
                     <button
                         className="text-[#ffe3b6] focus:outline-none"
                         onClick={sendMessageToFlutter}
                     >
-                        Manage <ArrowRightAltIcon />
+                        Manage <ArrowForwardIcon />
                     </button>
                 </div>
             </div>
